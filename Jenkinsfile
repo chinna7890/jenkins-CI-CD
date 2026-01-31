@@ -1,15 +1,11 @@
 pipeline {
     agent any
 
-    options {
-        skipDefaultCheckout()
-    }
-
     stages {
 
         stage('Clone') {
             steps {
-                git url: 'https://github.com/chinna7890/jenkins-ci-cd.git'
+                git 'https://github.com/chinna7890/jenkins-ci-cd.git'
             }
         }
 
@@ -44,7 +40,7 @@ pipeline {
 
         stage('Docker Deploy') {
             steps {
-                sh 'docker run -d -p 5050:8080 --name azure amazon'
+                sh 'docker run -d -p 6060:8080 --name azure amazon'
             }
         }
     }
