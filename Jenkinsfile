@@ -1,11 +1,15 @@
 pipeline {
     agent any
 
+    options {
+        skipDefaultCheckout()
+    }
+
     stages {
 
         stage('Clone') {
             steps {
-                git ''
+                git url: 'https://github.com/chinna7890/jenkins-ci-cd.git', branch: 'master'
             }
         }
 
