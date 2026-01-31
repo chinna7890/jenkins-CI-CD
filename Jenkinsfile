@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git url: 'https://github.com/chinna7890/jenkins-ci-cd.git', branch: 'master'
+                git url: 'https://github.com/chinna7890/jenkins-ci-cd.git'
             }
         }
 
